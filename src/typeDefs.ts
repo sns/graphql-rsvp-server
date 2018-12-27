@@ -1,7 +1,10 @@
 const typeDefs = `
 type Player{
-    key: String
-    name: String
+    name: String!
+}
+type Team{
+    name: String!
+    Players: [Player!]! @relation(name: "PLAYS_FOR", direction:"IN")
 }
 `;
 
