@@ -11,7 +11,7 @@ const driver = neo4j.driver(
 );
 
 const schema = makeAugmentedSchema({ typeDefs });
-const server = new ApolloServer({ schema, context: { driver }, playground: true });
+const server = new ApolloServer({ schema, context: { driver }});
 
 server.listen(4000, '0.0.0.0').then(({ url }) => {
   console.log(`GraphQL API ready at ${url}`);
