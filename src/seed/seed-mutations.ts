@@ -1,179 +1,200 @@
-const seedMutations = /* GraphQL */ `
+export const seedNodeMutations = /* GraphQL */ `
     mutation {
-        p1: CreatePlayer(Name: "Sina") {
-            Name
+        p1: CreatePlayer(name: "Sina") {
+            player_key
+            name
         }
-        p2: CreatePlayer(Name: "Brent") {
-            Name
+        p2: CreatePlayer(name: "Brent") {
+            player_key
+            name
         }
-        p3: CreatePlayer(Name: "Jessica") {
-            Name
+        p3: CreatePlayer(name: "Jessica") {
+            player_key
+            name
         }
-        p4: CreatePlayer(Name: "Kevin") {
-            Name
+        p4: CreatePlayer(name: "Kevin") {
+            player_key
+            name
         }
-        p5: CreatePlayer(Name: "Angelo") {
-            Name
+        p5: CreatePlayer(name: "Angelo") {
+            player_key
+            name
         }
-        p6: CreatePlayer(Name: "Matt") {
-            Name
+        p6: CreatePlayer(name: "Matt") {
+            player_key
+            name
         }
-        p7: CreatePlayer(Name: "Jack") {
-            Name
+        p7: CreatePlayer(name: "Jack") {
+            player_key
+            name
         }
-        p8: CreatePlayer(Name: "Tay") {
-            Name
+        p8: CreatePlayer(name: "Tay") {
+            player_key
+            name
         }
-        p9: CreatePlayer(Name: "Lauren") {
-            Name
+        p9: CreatePlayer(name: "Lauren") {
+            player_key
+            name
         }
-        p10: CreatePlayer(Name: "Mia") {
-            Name
+        p10: CreatePlayer(name: "Mia") {
+            player_key
+            name
         }
-        t1: CreateTeam(Name: "Kicks and giggles") {
-            Name
+        t1: CreateTeam(name: "Kicks and giggles") {
+            team_key
+            name
         }
-        pt1: AddTeamPlayers( from: {Name: "Sina"}, to: {Name: "Kicks and giggles"}) {
-            from{
-                Name
-            }
-        } 
-        pt2: AddTeamPlayers( from: {Name: "Jessica"}, to: {Name: "Kicks and giggles"}) {
-            from{
-                Name
-            }
-        } 
-        pt3: AddTeamPlayers( from: {Name: "Brent"}, to: {Name: "Kicks and giggles" }) {
-            from{
-                Name
-            }
-        } 
-        pt4: AddTeamPlayers( from: {Name: "Kevin"}, to: {Name: "Kicks and giggles" }) {
-            from{
-                Name
-            }
-        } 
-        pt5: AddTeamPlayers( from: {Name: "Angelo"}, to: {Name: "Kicks and giggles" }) {
-            from{
-                Name
-            }
-        } 
-        pt6: AddTeamPlayers( from: {Name: "Matt"}, to: {Name: "Kicks and giggles" }) {
-            from{
-                Name
-            }
-        } 
-        pt7: AddTeamPlayers( from: {Name: "Jack"}, to: {Name: "Kicks and giggles" }) {
-            from{
-                Name
-            }
-        } 
-        pt8: AddTeamPlayers( from: {Name: "Lauren"}, to: {Name: "Kicks and giggles" }) {
-            from{
-                Name
-            }
+        p11: CreatePlayer(name: "Jessica Cades") {
+            player_key
+            name
         }
-        pt9: AddTeamPlayers( from: {Name: "Mia"}, to: {Name: "Kicks and giggles" }) {
-            from{
-                Name
-            }
+        p12: CreatePlayer(name: "Kim Ambrose") {
+            player_key
+            name
         }
-        pt10: AddTeamPlayers( from: {Name: "Tay"}, to: {Name: "Kicks and giggles" }) {
-            from{
-                Name
-            }
+        p13: CreatePlayer(name: "Hattie DeLisle") {
+            player_key
+            name
         }
-        p11: CreatePlayer(Name: "Jessica Cades") {
-            Name
+        p14: CreatePlayer(name: "Matt Hamilton") {
+            player_key
+            name
         }
-        p12: CreatePlayer(Name: "Kim Ambrose") {
-            Name
+        p15: CreatePlayer(name: "Beth Mahr") {
+            player_key
+            name
         }
-        p13: CreatePlayer(Name: "Hattie DeLisle") {
-            Name
+        p16: CreatePlayer(name: "Ryan Michael") {
+            player_key
+            name
         }
-        p14: CreatePlayer(Name: "Matt Hamilton") {
-            Name
+        p17: CreatePlayer(name: "Chris Pumphrey") {
+            player_key
+            name
         }
-        p15: CreatePlayer(Name: "Beth Mahr") {
-            Name
+        p18: CreatePlayer(name: "Daniel Reiner") {
+            player_key
+            name
         }
-        p16: CreatePlayer(Name: "Ryan Michael") {
-            Name
+        p19: CreatePlayer(name: "Samuel Souvannason") {
+            player_key
+            name
         }
-        p17: CreatePlayer(Name: "Chris Pumphrey") {
-            Name
+        p20: CreatePlayer(name: "Chris Tenneson") {
+            player_key
+            name
         }
-        p18: CreatePlayer(Name: "Daniel Reiner") {
-            Name
-        }
-        p19: CreatePlayer(Name: "Samuel Souvannason") {
-            Name
-        }
-        p20: CreatePlayer(Name: "Chris Tenneson") {
-            Name
-        }
-        t2: CreateTeam(Name: "Charm City FC") {
-            Name
-        }
-        pt11: AddTeamPlayers( from: {Name: "Jessica Cades"}, to: {Name: "Charm City FC"}) {
-            from{
-                Name
-            }
-        } 
-        pt12: AddTeamPlayers( from: {Name: "Kim Ambrose"}, to: {Name: "Charm City FC"}) {
-            from{
-                Name
-            }
-        } 
-        pt13: AddTeamPlayers( from: {Name: "Hattie DeLisle"}, to: {Name: "Charm City FC" }) {
-            from{
-                Name
-            }
-        } 
-        pt14: AddTeamPlayers( from: {Name: "Matt Hamilton"}, to: {Name: "Charm City FC" }) {
-            from{
-                Name
-            }
-        } 
-        pt15: AddTeamPlayers( from: {Name: "Beth Mahr"}, to: {Name: "Charm City FC" }) {
-            from{
-                Name
-            }
-        } 
-        pt16: AddTeamPlayers( from: {Name: "Ryan Michael"}, to: {Name: "Charm City FC" }) {
-            from{
-                Name
-            }
-        } 
-        pt17: AddTeamPlayers( from: {Name: "Chris Pumphrey"}, to: {Name: "Charm City FC" }) {
-            from{
-                Name
-            }
-        } 
-        pt18: AddTeamPlayers( from: {Name: "Daniel Reiner"}, to: {Name: "Charm City FC" }) {
-            from{
-                Name
-            }
-        }
-        pt19: AddTeamPlayers( from: {Name: "Samuel Souvannason"}, to: {Name: "Charm City FC" }) {
-            from{
-                Name
-            }
-        }
-        pt20: AddTeamPlayers( from: {Name: "Chris Tenneson"}, to: {Name: "Charm City FC" }) {
-            from{
-                Name
-            }
-        }
-        g1: CreateGame(DateTime:{formatted: "2019-01-01T07:25:16.766Z"}){
-            DateTime{
-              formatted
-            },
-            Teams{
-              Name
-            }
+        t2: CreateTeam(name: "Charm City FC") {
+            team_key
+            name
         }
     }
 `;
-export default seedMutations;
+
+export const seedRelationshipMutations =
+    `mutation {
+        pt1: AddTeamPlayers( from: {name: "Sina"}, to: {name: "Kicks and giggles"}) {
+            from{
+                name
+            }
+        } 
+        pt2: AddTeamPlayers( from: {name: "Jessica"}, to: {name: "Kicks and giggles"}) {
+            from{
+                name
+            }
+        } 
+        pt3: AddTeamPlayers( from: {name: "Brent"}, to: {name: "Kicks and giggles" }) {
+            from{
+                name
+            }
+        } 
+        pt4: AddTeamPlayers( from: {name: "Kevin"}, to: {name: "Kicks and giggles" }) {
+            from{
+                name
+            }
+        } 
+        pt5: AddTeamPlayers( from: {name: "Angelo"}, to: {name: "Kicks and giggles" }) {
+            from{
+                name
+            }
+        } 
+        pt6: AddTeamPlayers( from: {name: "Matt"}, to: {name: "Kicks and giggles" }) {
+            from{
+                name
+            }
+        } 
+        pt7: AddTeamPlayers( from: {name: "Jack"}, to: {name: "Kicks and giggles" }) {
+            from{
+                name
+            }
+        } 
+        pt8: AddTeamPlayers( from: {name: "Lauren"}, to: {name: "Kicks and giggles" }) {
+            from{
+                name
+            }
+        }
+        pt9: AddTeamPlayers( from: {name: "Mia"}, to: {name: "Kicks and giggles" }) {
+            from{
+                name
+            }
+        }
+        pt10: AddTeamPlayers( from: {name: "Tay"}, to: {name: "Kicks and giggles" }) {
+            from{
+                name
+            }
+        }
+        pt11: AddTeamPlayers( from: {name: "Jessica Cades"}, to: {name: "Charm City FC"}) {
+            from{
+                name
+            }
+        } 
+        pt12: AddTeamPlayers( from: {name: "Kim Ambrose"}, to: {name: "Charm City FC"}) {
+            from{
+                name
+            }
+        } 
+        pt13: AddTeamPlayers( from: {name: "Hattie DeLisle"}, to: {name: "Charm City FC" }) {
+            from{
+                name
+            }
+        } 
+        pt14: AddTeamPlayers( from: {name: "Matt Hamilton"}, to: {name: "Charm City FC" }) {
+            from{
+                name
+            }
+        } 
+        pt15: AddTeamPlayers( from: {name: "Beth Mahr"}, to: {name: "Charm City FC" }) {
+            from{
+                name
+            }
+        } 
+        pt16: AddTeamPlayers( from: {name: "Ryan Michael"}, to: {name: "Charm City FC" }) {
+            from{
+                name
+            }
+        } 
+        pt17: AddTeamPlayers( from: {name: "Chris Pumphrey"}, to: {name: "Charm City FC" }) {
+            from{
+                name
+            }
+        } 
+        pt18: AddTeamPlayers( from: {name: "Daniel Reiner"}, to: {name: "Charm City FC" }) {
+            from{
+                name
+            }
+        }
+        pt19: AddTeamPlayers( from: {name: "Samuel Souvannason"}, to: {name: "Charm City FC" }) {
+            from{
+                name
+            }
+        }
+        pt20: AddTeamPlayers( from: {name: "Chris Tenneson"}, to: {name: "Charm City FC" }) {
+            from{
+                name
+            }
+        }
+}`;
+export default {
+    seedNodeMutations,
+    seedRelationshipMutations
+};

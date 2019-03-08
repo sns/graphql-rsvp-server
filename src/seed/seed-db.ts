@@ -12,6 +12,6 @@ const client = new ApolloClient({
   cache: new InMemoryCache()
 });
 client.mutate({
-    mutation: gql(seedMutations)
+    mutation: gql(seedMutations.seedNodeMutations)
 }).then(data => console.log(data))
 .catch(error => console.error(error));
