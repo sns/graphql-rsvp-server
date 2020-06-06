@@ -21,7 +21,7 @@
     "apollo-client": "^2.4.8",
     "apollo-link-http": "^1.5.9",
     "apollo-server": "^2.3.1",
-    "apollo-server-express": "^2.3.1",
+    "apollo-server-express": "^2.14.2",
     "aws-lambda": "^0.1.2",
     "dotenv": "^6.2.0",
     "graphql": "^14.1.1",
